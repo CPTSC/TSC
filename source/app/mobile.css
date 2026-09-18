@@ -1,0 +1,106 @@
+/* Responsive layouts follow available space, including phones in landscape. */
+@media (max-width: 1180px) {
+  .site-header.v2-header {height:80px;min-height:80px;padding:10px 20px;gap:16px;align-items:center;flex-wrap:nowrap;position:sticky;top:0}
+  .v2-header>a:first-child {width:auto;flex:0 1 auto}
+  .v2-header img {width:155px;max-width:100%;height:auto}
+  .v2-header nav.desktop-navigation,.v2-header .header-cta,.v2-header .design-test-badge {display:none}
+  .mobile-navigation {display:block;margin-left:auto}
+  .mobile-navigation summary {list-style:none;display:flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;color:var(--navy);background:var(--pale-blue)}
+  .mobile-navigation summary::-webkit-details-marker {display:none}
+  .mobile-navigation summary svg {width:20px;height:20px}
+  .mobile-navigation .menu-close-icon {display:none}
+  .mobile-navigation[open] .menu-close-icon {display:block}
+  .mobile-navigation[open] .menu-open-icon {display:none}
+  .v2-header .mobile-navigation nav {position:absolute;top:100%;left:0;right:0;display:flex;flex-direction:column;gap:4px;width:100%;max-height:calc(100dvh - 80px);overflow-y:auto;overscroll-behavior:contain;margin:0;padding:12px 20px 20px;background:white;border-bottom:1px solid var(--border);box-shadow:0 16px 28px #03033318}
+  .v2-header .mobile-navigation:not([open]) nav {display:none}
+  .v2-header .mobile-navigation nav a {display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:46px;padding:11px 14px;font-size:16px;white-space:normal;border-radius:9px}
+  .mobile-navigation nav a svg {width:17px;height:17px;flex:none}
+  .mobile-navigation nav a[aria-current=page] {background:var(--pale-blue);color:var(--navy);font-weight:800}
+  .v2-header .mobile-navigation nav a.mobile-booking {background:var(--navy);color:white;margin-top:8px}
+  .mobile-navigation :focus-visible {outline:3px solid var(--primary);outline-offset:2px}
+  section[id] {scroll-margin-top:96px}
+}
+
+@media (max-width: 700px) {
+  .home-about, .home-about + .section-divider {display:none}
+  body {font-size:16px;line-height:1.6}
+  .hero {min-height:0}
+  .hero-copy {width:auto;min-width:0;margin:0;padding:44px 20px 36px}
+  .hero h1,.seo-hero h1 {font-size:clamp(34px,9vw,44px);line-height:1.12;letter-spacing:-.035em;overflow-wrap:normal}
+  .hero-lede {font-size:16px;line-height:1.65;margin:22px 0}
+  .hero-actions {display:grid;gap:12px;justify-items:stretch}
+  .hero-actions a {white-space:normal;min-height:48px;height:auto;text-align:center;justify-content:center;padding:12px 14px;font-size:14px}
+  .hero-actions a svg {flex:none}
+  .proof-row {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:28px}
+  .proof-row span {width:auto;min-width:0;margin:0;padding:18px 5px 0;line-height:1.5;font-size:12px;text-align:center;border:0}
+  .proof-row strong {font-size:18px;letter-spacing:-.04em}
+  .proof-row span:nth-child(3) {grid-column:auto}
+  .expectation-strip {padding:0 20px}
+  .expectation-strip>div,.expectation-strip>div:first-child {padding:24px 0}
+  .expectation-strip p {font-size:15px;line-height:1.65}
+  .solutions,.method,.preview-form,.seo-hero,.seo-grid,.outcomes,.faq-section,.integration-band,.calculator-section,.freight-quote-section,.leader-grid,.contact-grid,.contact-prep,.insight-grid,.conversion-band {padding:44px 20px;gap:24px}
+  .section-heading-row,.section-intro,.seo-hero,.contact-grid,.insight-grid,.integration-band,.calculator-shell {grid-template-columns:minmax(0,1fr);gap:24px}
+  .about-intro {row-gap:22px}
+  .section-heading-row h2,.method-intro h2,.preview-form h2,.seo-grid h2,.outcomes h2,.faq-section h2,.service-definition h2,.calculator-section .section-intro h2,.freight-quote-heading h2 {font-size:clamp(28px,7.5vw,36px);line-height:1.18;letter-spacing:-.03em;overflow-wrap:normal}
+  .section-heading-row>p,.about-intro .about-summary,.seo-hero>div>p:not(.eyebrow),.section-intro>p:last-child {font-size:16px;line-height:1.65;margin-top:0}
+  .eyebrow {font-size:12px;margin-bottom:12px;letter-spacing:.1em}
+  .section-divider {margin:36px 0}
+  .solution-grid {margin-top:26px;gap:16px}
+  .solution-card {padding:24px;min-height:0}
+  .solution-card>svg {margin-bottom:16px;width:28px;height:28px}
+  .solution-card h3 {font-size:24px;line-height:1.25}
+  .solution-card p {font-size:16px;margin:12px 0}
+  .solution-card ul {font-size:14px;padding-top:0;line-height:1.65}
+  .solution-card a {min-height:48px;font-size:15px;line-height:1.45;margin-top:12px;color:#236faa}
+  .solution-card a svg {flex:none}
+  .people-strip {max-width:none;grid-template-columns:1fr}
+  .person-card {grid-template-columns:1fr;min-height:0}
+  .person-card img {position:relative;width:100%;height:260px;min-height:0;object-position:center 22%}
+  .person-panel {position:static;padding:20px;transform:none;background:white;color:var(--navy)}
+  .person-bio {font-size:14px;color:var(--slate);line-height:1.65}
+  .person-heading span {font-size:12px;color:var(--slate)}
+  .method-steps {margin:24px 0;grid-template-columns:1fr}
+  .method-steps li {margin:0;padding:20px 0;display:grid;grid-template-columns:30px 1fr;gap:12px;border-right:0}
+  .method-steps h3 {margin:0 0 8px}
+  .method-steps p,.trust-panel p {font-size:15px}
+  .trust-panel>div,.review-form,.seo-grid>div,.service-definition>div,.seo-hero aside {padding:24px}
+  .service-definition {padding:32px 20px 16px}
+  .seo-page .service-definition+.seo-grid {padding-top:0}
+  .seo-page .seo-grid+.service-tool-section {padding-top:44px}
+  .seo-hero {min-height:0}
+  .seo-hero h1 {margin-bottom:18px}
+  .seo-hero aside>strong {font-size:20px}
+  .review-form label,.review-copy li {font-size:14px}
+  input,select,textarea,.review-form select,.review-form textarea {font-size:16px!important;max-width:100%}
+  .review-form input,.review-form select {min-height:48px}
+  .review-form input[type=file] {height:auto;white-space:normal;padding:10px;min-width:0}
+  .review-form small,.fine-print,.freight-sandbox-note {font-size:12px;line-height:1.6}
+  .review-copy li {align-items:flex-start}
+  .review-copy li svg {flex:none;margin-top:3px}
+  .conversion-actions {width:100%;min-width:0;max-width:none}
+  .conversion-actions a,.freight-conversion a {white-space:normal!important;height:auto;min-height:48px}
+  .faq-section summary {padding:14px 0;min-height:48px;font-size:16px;line-height:1.5;color:#236faa}
+  .insight-card-content {position:static;margin-top:20px;transform:none!important}
+  .insight-answer {max-height:none!important;opacity:1;transform:none;overflow:visible}
+  .insight-grid .insight-answer p {font-size:16px}
+  .insight-card-top small {display:none}
+  .integration-finder {padding:24px 18px}
+  .finder-result li {font-size:15px;line-height:1.6}
+  .calculator-section>.fine-print {padding:0}
+  .controls,.impact-card {padding:24px 18px}
+  .impact-card output {font-size:clamp(36px,10vw,60px);max-width:100%;overflow-wrap:anywhere}
+  .freight-tool-header {padding:14px;gap:10px}
+  .freight-guided-badge {display:none}
+  .freight-conversion {flex-direction:column;align-items:stretch;padding:24px;gap:20px}
+  .freight-conversion h3 {font-size:23px;line-height:1.3}
+  footer {padding:36px 20px 24px;gap:28px;grid-template-columns:minmax(0,1fr)}
+  footer>div a {min-height:44px;align-items:center;overflow-wrap:anywhere}
+  .copyright {margin-top:0}
+  .legal-page {padding:40px 20px}
+  .legal-page h1 {font-size:36px}
+  .legal-page>p:not(.eyebrow) {font-size:16px}
+}
+@media (hover:none) {
+  .solution-card:hover {transform:none;box-shadow:none;background:var(--light-gray);border-color:var(--border)}
+  .hero-network {opacity:.5}
+}

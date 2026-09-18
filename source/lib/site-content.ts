@@ -1,0 +1,134 @@
+export const siteUrl = 'https://transactionsolutionsconsulting.com';
+export const shareImage = {
+  url: `${siteUrl}/tsc-share-logo-v4.jpg`,
+  width: 1536,
+  height: 1024,
+  type: 'image/jpeg',
+  alt: 'TSC Transaction Solutions Consulting logo on a navy blue hexagonal network background',
+};
+export const bookingUrl = 'https://calendar.app.google/A6ZkKQEc4v8ikqp2A';
+
+export type Service = {
+  slug: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  intro: string;
+  plainLanguage?: { title: string; body: string };
+  problems: string[];
+  capabilities: string[];
+  outcomes: string[];
+  faqs: { question: string; answer: string }[];
+};
+
+export const services: Service[] = [
+  {
+    slug: 'payment-processing-ach', eyebrow: 'Card and ACH strategy',
+    title: 'Payment processing built around your operation',
+    description: 'Independent card processing and ACH consulting for businesses that need clearer pricing, stronger support, and a payment strategy aligned with their operation.',
+    intro: 'TSC evaluates the complete acceptance environment rather than focusing on a single quoted rate. We examine interchange, processor markup, gateway costs, card mix, ACH, funding, reporting, security, and the workflows surrounding every transaction.',
+    plainLanguage: { title: 'What card and ACH payments are', body: 'Card payments let customers pay with credit or debit cards through a terminal, website, invoice link, mobile device, or recurring billing setup. ACH payments move money directly between bank accounts. Both methods affect how quickly you are paid, what each transaction costs, how payment data is secured, and how the deposit is matched back to the right customer or invoice.' },
+    problems: ['Processing statements that are difficult to interpret', 'Pricing that no longer reflects volume or risk', 'Disconnected card, ACH, online, recurring, or mobile channels', 'Funding, chargeback, PCI, or support issues without clear ownership'],
+    capabilities: ['Statement and effective-rate analysis', 'Card-present, ecommerce, mobile, recurring, ACH, and eCheck strategy', 'Processor, gateway, and pricing-model evaluation', 'PCI guidance, tokenization, funding, chargeback, and ongoing support'],
+    outcomes: ['Transparent cost structure', 'Acceptance methods matched to customer behavior', 'One accountable advisor across providers', 'Ongoing performance monitoring after implementation'],
+    faqs: [
+      { question: 'Does TSC represent one payment processor?', answer: 'No. TSC evaluates the client’s economics, systems, risk, and operational requirements before recommending a processor, gateway, or specialist partner.' },
+      { question: 'Can TSC review both card and ACH costs?', answer: 'Yes. The review can include interchange, processor markup, gateway fees, ACH pricing, ancillary fees, funding, and the operational cost of the surrounding workflow.' },
+      { question: 'What does a merchant account do?', answer: 'A merchant account is part of the setup that allows a business to accept card payments and receive settlement. The processor, gateway, bank relationship, pricing, risk rules, and support model all affect how that setup performs.' },
+      { question: 'How can a business increase ACH adoption?', answer: 'Start with the right use cases and customer experience. Clear payment instructions, saved bank accounts, recurring authorization, pay-by-link, ERP integration, and thoughtful pricing can make ACH easier to choose without creating collection friction.' },
+      { question: 'Can every merchant add a credit card surcharge?', answer: 'No. Surcharging depends on card-brand rules, state law, card type, notice, signage, disclosure, registration, and processor capability. Debit cards generally cannot be surcharged. TSC reviews the operating and compliance requirements before recommending it.' },
+      { question: 'How is a cash discount different from a surcharge?', answer: 'A surcharge adds a disclosed fee to an eligible credit card transaction. A compliant cash-discount program presents a posted price and offers a reduction for cash or another qualifying method. The pricing display, receipts, state rules, and card-brand requirements matter.' },
+      { question: 'Does accepting ACH remove PCI responsibilities?', answer: 'No. ACH is not governed by PCI DSS in the same way as card data, but a business that also accepts cards still has PCI responsibilities. ACH also carries its own authorization, account-validation, return, and security requirements.' },
+    ],
+  },
+  {
+    slug: 'interchange-optimization', eyebrow: 'Interchange optimization',
+    title: 'Improve qualification before negotiating markup',
+    description: 'Interchange optimization consulting that identifies qualification gaps, transaction-data issues, and preventable card acceptance costs.',
+    intro: 'Interchange is usually the largest component of card acceptance cost. TSC reviews how transactions qualify, which card types drive expense, what data is being submitted, and whether the gateway and processor are supporting the intended qualification strategy.',
+    problems: ['Corporate and purchasing cards qualifying without enhanced data', 'Downgrades hidden inside dense monthly statements', 'A processor-rate discussion that ignores underlying interchange', 'Gateway or ERP fields that do not pass the required transaction data'],
+    capabilities: ['Transaction-level qualification analysis', 'Level 2 and Level 3 data review', 'Card-brand and card-mix assessment', 'Gateway, processor, and ERP data-flow validation'],
+    outcomes: ['Clear separation of interchange and provider margin', 'Documented qualification opportunities', 'Prioritized remediation plan', 'Ongoing statement auditing to verify results'],
+    faqs: [
+      { question: 'Is interchange the same as processor markup?', answer: 'No. Interchange is generally paid to the card-issuing bank, while processor markup is the provider’s added pricing. They should be evaluated separately.' },
+      { question: 'Does Level 2 or Level 3 data guarantee lower fees?', answer: 'No. Qualification depends on card type, network rules, transaction method, submitted data, timing, and processor configuration. TSC validates the actual opportunity before projecting an outcome.' },
+    ],
+  },
+  {
+    slug: 'level-2-level-3-processing', eyebrow: 'Commercial card qualification',
+    title: 'Commercial card processing with the right data',
+    description: 'Level 2 and Level 3 payment consulting for B2B merchants accepting corporate, purchasing, and commercial cards.',
+    intro: 'Commercial card transactions may require additional invoice, tax, customer, and line-item information to qualify as intended. TSC maps the data from the point of sale or ERP through the gateway and processor so the recommendation reflects the real transaction flow.',
+    problems: ['Required fields are missing, incomplete, or formatted incorrectly', 'Data exists in the ERP but never reaches the card network', 'Qualification varies by channel, business unit, or gateway', 'Savings estimates are based on assumptions rather than transaction evidence'],
+    capabilities: ['Commercial card mix and downgrade review', 'Enhanced-data field mapping', 'Gateway and integration validation', 'Before-and-after statement monitoring'],
+    outcomes: ['Better visibility into commercial-card costs', 'A documented data and configuration plan', 'Reduced manual entry where integration is practical', 'Evidence-based qualification monitoring'],
+    faqs: [
+      { question: 'What information is commonly associated with enhanced data?', answer: 'Requirements vary, but can include tax information, invoice or customer references, item descriptions, quantities, unit measures, and other transaction detail.' },
+      { question: 'Can the ERP provide the required information automatically?', answer: 'Often it can, but the ERP edition, gateway, processor, integration method, and available fields must be confirmed before promising automated qualification.' },
+    ],
+  },
+  {
+    slug: 'erp-integrated-payments', eyebrow: 'ERP-integrated payments',
+    title: 'Connect payments to your accounting system',
+    description: 'ERP-integrated payment consulting for card, ACH, invoice payment, posting, reconciliation, and customer self-service workflows.',
+    intro: 'TSC defines the payment strategy and coordinates the processor, gateway, ERP, and specialist technology partners. The objective is not integration for its own sake; it is a controlled workflow that reduces re-entry, improves visibility, and keeps payment data aligned with the accounting record.',
+    plainLanguage: { title: 'What ERP-integrated payments are', body: 'An ERP connects business functions such as orders, inventory, customers, and finance. Payment integrations can also connect to a standalone accounting system. An integrated payment setup connects card and ACH activity to that system so staff do not have to re-enter the same information in separate places. The goal is simpler payment collection, cleaner posting, and faster reconciliation.' },
+    problems: ['Manual payment entry and fragmented approvals', 'Payments that do not post or reconcile cleanly', 'Multiple entities, locations, gateways, or acceptance channels', 'Integration claims that have not been validated against the actual ERP version'],
+    capabilities: ['ERP, CRM, gateway, and processor discovery', 'Card, ACH, pay-by-link, portal, and recurring-payment workflows', 'Tokenization, posting, reconciliation, and exception handling', 'Packaged-integration validation and custom-connectivity planning'],
+    outcomes: ['Less duplicate entry', 'Cleaner payment and accounting records', 'Better customer and staff experience', 'Accountability across the implementation team'],
+    faqs: [
+      { question: 'Which ERP systems can TSC evaluate?', answer: 'TSC can assess environments including NetSuite, Microsoft Dynamics, QuickBooks, Acumatica, Epicor, SAP, Sage, Oracle, Infor, SYSPRO, Odoo, and other systems. Exact coverage depends on version, modules, hosting, gateway, and workflow.' },
+      { question: 'Who is Clarity Ventures?', answer: 'Clarity Ventures is a technology partner TSC can bring into suitable integration projects. Its Payment Hub and Connect capabilities can link payment services with ERPs, customer portals, ecommerce systems, and other business applications. TSC remains responsible for payment strategy, processor alignment, scope validation, and the client relationship.' },
+      { question: 'What can a payment hub automate?', answer: 'Depending on the system and configuration, it can present ERP invoices in a portal, support cards and ACH, store gateway tokens, schedule payments, trigger capture from ERP events, synchronize status, and provide transaction logs and exception handling.' },
+      { question: 'Is an ERP payment integration PCI compliant?', answer: 'The solution must be designed around PCI DSS requirements. Tokenization and gateway-hosted payment components can reduce where raw card data travels, but the merchant still needs to validate its own PCI scope, procedures, vendors, and annual compliance obligations.' },
+      { question: 'Is Payment Hub the same as a payment gateway?', answer: 'No. A gateway connects the merchant to payment authorization and processing. A payment hub coordinates payment methods, channels, ERP events, invoices, tokens, status, and reporting around one or more gateways.' },
+      { question: 'Is every listed integration ready without development?', answer: 'No. A packaged connector is a starting point. TSC confirms the ERP edition, modules, hosting model, gateway, data fields, security requirements, and desired workflow before setting scope.' },
+    ],
+  },
+  {
+    slug: 'ar-ap-automation', eyebrow: 'AR and AP automation',
+    title: 'Automate the work around every payment',
+    description: 'AR and AP automation consulting for invoice delivery, approvals, payment execution, cash application, remittance, and reconciliation.',
+    intro: 'Payment automation takes repetitive payment work off your team’s plate. TSC looks at how invoices are approved, how customers and vendors are paid, and where information gets re-entered or lost. Then we help connect the right tools without giving up visibility or control.',
+    plainLanguage: { title: 'What AR and AP automation is', body: 'Accounts receivable, or AR, covers the money customers owe your business. Accounts payable, or AP, covers the money your business owes suppliers. Automation connects routine steps such as sending invoices, collecting approvals, making or receiving payments, applying remittance details, and updating accounting records, while keeping people responsible for approvals and exceptions.' },
+    problems: ['Invoice and approval work spread across email and spreadsheets', 'Manual remittance, cash application, or reconciliation', 'Limited visibility into payment status and ownership', 'Payment methods selected without considering cost, control, or supplier and customer experience'],
+    capabilities: ['Invoice capture, routing, and approval design', 'Customer portals, recurring billing, and collections support', 'ACH, virtual card, check, and supplier-payment strategy', 'Singe Payables support for supplier enrollment, virtual cards, and rebate analysis', 'Remittance, posting, cash application, and reconciliation workflows'],
+    outcomes: ['Less repetitive entry', 'Clearer approval and exception ownership', 'Improved payment visibility', 'A scalable process with appropriate controls'],
+    faqs: [
+      { question: 'Does automation require replacing the ERP?', answer: 'Not necessarily. Many opportunities involve connecting or configuring the existing ERP and surrounding applications rather than replacing the accounting system.' },
+      { question: 'Can virtual cards create rebate opportunities?', answer: 'They can in appropriate supplier-payment programs, but economics depend on supplier acceptance, program terms, payment volume, and implementation requirements.' },
+      { question: 'What is AP automation in plain terms?', answer: 'It replaces manual invoice routing, check cutting, payment files, remittance, and status tracking with a connected process. The accounting team still controls approvals and exceptions, but spends less time moving information by hand.' },
+      { question: 'Why are manufacturers and distributors adopting it?', answer: 'They often manage high invoice counts, many suppliers, multiple locations, and tight purchasing controls. Automation can reduce check work, improve payment visibility, capture early-pay discounts, and move eligible suppliers to virtual cards that may generate rebates.' },
+      { question: 'What does Singe Payables contribute?', answer: 'Singe Payables is a specialist partner for integrated payables, supplier engagement, program management, ACH, and virtual-card payments. Its process can include estimating the opportunity, enrolling suppliers, and connecting through an API, SFTP, or user interface.' },
+    ],
+  },
+  {
+    slug: 'freight-logistics', eyebrow: 'Freight and logistics',
+    title: 'Turn transportation spend into an accountable strategy',
+    description: 'Freight and logistics cost consulting through TSC’s specialist relationship, including parcel, LTL, contract, audit, and managed freight support.',
+    intro: 'Transportation cost is often fragmented across carriers, modes, surcharges, invoices, and internal teams. Through TSC’s relationship with Business Solutions Group, we advise on freight much like we advise on payments: assess the opportunity, bring in the right specialist support, and keep one point of accountability.',
+    plainLanguage: { title: 'What freight and logistics covers', body: 'Freight and logistics is how products and materials move from one location to another. Parcel typically covers smaller packages, while LTL combines a shipment with other freight on the same truck and full truckload uses the trailer for one shipment. Carrier rates, surcharges, routes, service levels, invoice accuracy, and internal shipping processes all affect the final cost.' },
+    problems: ['Parcel surcharges and contract terms that are difficult to benchmark', 'LTL or multimodal spend without consolidated visibility', 'Invoice errors and limited recovery processes', 'Carrier and TMS decisions disconnected from broader operating priorities'],
+    capabilities: ['UPS and FedEx parcel and surcharge analysis', 'LTL, FTL, air, ocean, rail, and 3PL support', 'Invoice audit, recovery, and spend intelligence', 'Rate shopping, routing, TMS, and managed freight evaluation'],
+    outcomes: ['Clearer transportation economics', 'Validated contract and recovery opportunities', 'Improved carrier and routing visibility', 'TSC-guided access to specialist resources'],
+    faqs: [
+      { question: 'Does TSC provide the freight rates directly?', answer: 'TSC coordinates the client relationship and works through its freight solutions relationship for rate exploration and specialist transportation support.' },
+      { question: 'Can the review include both parcel and LTL?', answer: 'Yes. The scope can include parcel, LTL, truckload, air, ocean, rail, 3PL, audit, and transportation-management requirements as appropriate.' },
+    ],
+  },
+  {
+    slug: 'merchant-statement-review', eyebrow: 'Merchant statement review',
+    title: 'Understand what you pay before deciding what to change',
+    description: 'Independent merchant statement reviews covering interchange, processor markup, qualification, gateway fees, ACH, ancillary charges, and payment workflow implications.',
+    intro: 'A useful statement review separates observed charges from assumptions and connects the economics to the underlying transaction flow. TSC explains what is known, what requires more data, where a concern may exist, and which changes deserve priority.',
+    problems: ['Dense statements with unclear categories and pass-through costs', 'Proposals that compare only selected rates', 'Qualification issues without transaction-level evidence', 'Multiple merchant accounts, providers, gateways, or business units'],
+    capabilities: ['Effective-rate and fee-category analysis', 'Interchange, markup, gateway, and ancillary-fee separation', 'Qualification and card-mix review', 'Provider proposal normalization and implementation priorities'],
+    outcomes: ['A clear current-state baseline', 'Comparable economics across proposals', 'Documented risks and dependencies', 'A practical next-step recommendation'],
+    faqs: [
+      { question: 'What should be provided for a review?', answer: 'Recent complete processing statements are the usual starting point. Depending on the question, TSC may also request gateway reports, card-mix detail, transaction exports, contracts, or workflow information.' },
+      { question: 'Does a lower quoted rate always mean a lower total cost?', answer: 'No. Total cost can be affected by interchange qualification, card mix, gateway and software fees, ancillary charges, transaction methods, and operational work.' },
+    ],
+  },
+];
+
+export const serviceBySlug = Object.fromEntries(services.map((service) => [service.slug, service]));

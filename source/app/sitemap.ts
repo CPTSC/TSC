@@ -1,0 +1,3 @@
+import type { MetadataRoute } from 'next';
+import { services, siteUrl } from '@/lib/site-content';
+export default function sitemap(): MetadataRoute.Sitemap { return [{ url: siteUrl, changeFrequency: 'monthly', priority: 1 }, ...services.map(({ slug }) => ({ url: `${siteUrl}/services/${slug}`, changeFrequency: 'monthly' as const, priority: .85 })), ...['about','contact','insights','privacy','terms','accessibility'].map((path) => ({ url: `${siteUrl}/${path}`, changeFrequency: path === 'privacy' || path === 'terms' || path === 'accessibility' ? 'yearly' as const : 'monthly' as const, priority: path === 'insights' ? .8 : path === 'privacy' || path === 'terms' || path === 'accessibility' ? .3 : .6 }))]; }
