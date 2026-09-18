@@ -4,7 +4,7 @@ import { siteUrl } from '@/lib/site-content';
 
 export const metadata: Metadata = {
   title: 'Merchant Payment Questions Answered | TSC Insights',
-  description: 'Twenty practical payment concepts covering interchange, pricing, Level 2 and Level 3 data, ACH, ERP integrations, AR and AP automation, security, statements, and freight.',
+  description: 'Twenty practical payment concepts covering interchange, pricing, Level 2 and Level 3 data, ACH, ERP integrations, AR and AP automation, security, statements, and funding reconciliation.',
   alternates: { canonical: `${siteUrl}/insights` },
 };
 
@@ -26,16 +26,15 @@ const insights = [
   { category: 'Accounts receivable', question: 'What does AR automation improve?', answer: 'AR automation can streamline invoice delivery, payment acceptance, reminders, cash application, and reporting. The best opportunity depends on where staff lose time or visibility today. TSC reviews the current workflow and prioritizes improvements with measurable operational value.', href: '/services/ar-ap-automation' },
   { category: 'Accounts payable', question: 'What does AP automation improve?', answer: 'AP automation can connect invoice intake, approvals, payment execution, remittance, and reconciliation. Controls and supplier adoption are as important as technology. TSC helps design the workflow, evaluate providers, and coordinate implementation around the accounting environment.', href: '/services/ar-ap-automation' },
   { category: 'Accounts payable', question: 'How do virtual cards and rebates work?', answer: 'A virtual card uses a controlled card credential to pay an enrolled supplier. Eligible spend may generate revenue share, but economics depend on supplier acceptance, interchange, program terms, and payment mix. TSC evaluates the net value without overstating the rebate headline.', href: '/services/ar-ap-automation' },
+  { category: 'Operations', question: 'Why might a processor deposit not match the day’s sales?', answer: 'Card sales, processor settlement, and bank funding are related but separate events. Batch timing, weekends, fees, refunds, chargebacks, reserves, and funding exceptions can change the amount or date of a deposit. TSC traces the transaction, batch, and funding records so accounting teams can identify the cause and build a cleaner reconciliation process.', href: '/services/erp-integrated-payments' },
   { category: 'Statements', question: 'What can a merchant statement review uncover?', answer: 'A review can identify pricing structure, provider markup, qualification patterns, card mix, ancillary fees, funding behavior, and unusual changes over time. One month may not tell the whole story. TSC combines statements with business context before making recommendations.', href: '/services/merchant-statement-review' },
   { category: 'Provider strategy', question: 'When should I consider changing processors?', answer: 'A switch may be warranted when cost, support, funding, reporting, integration, or contract limitations cannot be corrected. Changing solely for a quoted rate can create new problems. TSC first tests whether the current environment can be improved, then runs a disciplined comparison if needed.', href: '/contact' },
-  { category: 'Freight', question: 'Can freight and payment strategy work together?', answer: 'Yes. Freight expense, customer delivery options, working capital, and payment workflows can affect the same operating margin. TSC can help merchants explore parcel and LTL options while keeping the commercial review connected to their broader payment and back-office strategy.', href: '/services/freight-logistics' },
 ];
 
 const groups = [
  {title:'Card costs and pricing', categories:['Card costs','Pricing','Qualification','Customer pricing','Statements','Provider strategy']},
  {title:'Payment methods and security',categories:['ACH','Infrastructure','Security']},
  {title:'Connected accounting and automation',categories:['ERP integration','Operations','Accounts receivable','Accounts payable']},
- {title:'Freight and logistics',categories:['Freight']},
 ];
 export default function InsightsPage() {
  return <><SiteHeader/><main id="main-content" className="seo-page"><section className="seo-hero insights-hero"><div><p className="eyebrow">Payment concepts explained</p><h1>Understand your payment options.</h1><p>Twenty practical concepts, in plain language. Choose a question to read the answer.</p></div></section><section className="concept-groups">{groups.map(group=><div className="concept-group" key={group.title}><h2>{group.title}</h2>{insights.filter(item=>group.categories.includes(item.category)).map(item=><details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div>)}</section><ConversionBand/></main><SiteFooter/></>;
