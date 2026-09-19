@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     apple: '/tsc-logo.png',
   },
   alternates: { canonical: siteUrl },
-  robots: { index: false, follow: false, googleBot: { index: false, follow: false, noarchive: true, nosnippet: true } },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Every transaction should move your business forward.',
     description: 'Independent payment strategy, ERP-integrated workflows, and interchange optimization.',

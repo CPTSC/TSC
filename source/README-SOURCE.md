@@ -10,9 +10,10 @@ original Sites project. The source revision is
 2. Build the site with the pinned dependencies and package manager.
 3. Preserve the production launch settings, including public indexing,
    canonical URLs, the approved white favicon, calculator disclosures, and the
-   third-party freight disclosure.
+   third-party freight disclosure. Run `pnpm verify:seo` before every build.
 4. Validate all routes, the missing-page response, mobile layout, metadata,
-   assets, and interactive tools.
+   assets, interactive tools, `robots.txt`, and `sitemap.xml`. Confirm the
+   rendered pages do not contain `noindex` or `nofollow` directives.
 5. Copy only the validated Cloudflare output into the repository root:
    `dist/client`, `dist/server`, and any explicitly required deployment files.
 6. Run a Cloudflare deployment dry run before requesting a merge to `main`.
